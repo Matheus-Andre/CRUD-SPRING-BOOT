@@ -1,0 +1,42 @@
+/* src/custom.css */
+body {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.footer {
+    -webkit-margin-bottom-collapse: bottom;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343a40;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#343a40; 
+    padding: 20px 0;
+}
+
+.header-logo {
+    width: 80px; 
+    height: 65px; 
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 2.5rem; 
+    color: #ffffff;
+    font-family: 'Arial', sans-serif; 
+}

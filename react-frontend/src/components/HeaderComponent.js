@@ -1,25 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import logo from '../assets/financas.png'; // Adicione o logo na pasta assets
+import '../custom.css'; // Importar o arquivo CSS personalizado
 
 class HeaderComponent extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-                 
-        }
-    }
-
     render() {
         return (
             <div>
-                <header>
-                    <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div><a href="" className="navbar-brand">Employee Management App</a></div>
-                    </nav>
+                <header className="header">
+                    <img src={logo} alt="Logo" className="header-logo" />
+                    <div className="header-title">iFinanças</div>
                 </header>
             </div>
-        )
+        );
     }
 }
 
-export default HeaderComponent
+export default HeaderComponent;
