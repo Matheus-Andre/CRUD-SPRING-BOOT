@@ -40,9 +40,15 @@ class ListSolicitacaoComponent extends Component {
     render() {
         return (
             <div>
+<<<<<<< HEAD
                 <h2 className="text-center">Lista de solicitações</h2>
                 <div className="row">
                     <button className="btn btn-primary" onClick={this.addSolicitacao}> Criar Solicitação</button>
+=======
+                <h2 className="text-center">Solicitações List</h2>
+                <div className="row">
+                    <button className="btn btn-primary" onClick={this.addSolicitacao}> Add Solicitação</button>
+>>>>>>> f1c5f80 (SolicitacaoConsultoria)
                 </div>
                 <br></br>
                 <div className="row">
@@ -58,7 +64,11 @@ class ListSolicitacaoComponent extends Component {
                         </thead>
                         <tbody>
                             {
+<<<<<<< HEAD
                                 this.state.solicitacao.map(
+=======
+                                this.state.solicitacoes.map(
+>>>>>>> f1c5f80 (SolicitacaoConsultoria)
                                     solicitacao =>
                                         <tr key={solicitacao.id}>
                                             <td> {solicitacao.user_id} </td>

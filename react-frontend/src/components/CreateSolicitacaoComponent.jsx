@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import SolicitacaoService from '../services/SolicitacaoService';
+<<<<<<< HEAD
 import '../custom.css'; // Importar o arquivo CSS personalizado
+=======
+>>>>>>> f1c5f80 (SolicitacaoConsultoria)
 
 class CreateSolicitacaoComponent extends Component {
     constructor(props) {
@@ -48,11 +51,19 @@ class CreateSolicitacaoComponent extends Component {
 
         if (this.state.id === '_add') {
             SolicitacaoService.createSolicitacao(solicitacao).then((res) => {
+<<<<<<< HEAD
                 this.props.history.push('/solicitacao');
             });
         } else {
             SolicitacaoService.updateSolicitacao(solicitacao, this.state.id).then((res) => {
                 this.props.history.push('/solicitacao');
+=======
+                this.props.history.push('/solicitacoes');
+            });
+        } else {
+            SolicitacaoService.updateSolicitacao(solicitacao, this.state.id).then((res) => {
+                this.props.history.push('/solicitacoes');
+>>>>>>> f1c5f80 (SolicitacaoConsultoria)
             });
         }
     };
@@ -74,11 +85,16 @@ class CreateSolicitacaoComponent extends Component {
     };
 
     cancel() {
+<<<<<<< HEAD
         this.props.history.push('/solicitacao');
+=======
+        this.props.history.push('/solicitacoes');
+>>>>>>> f1c5f80 (SolicitacaoConsultoria)
     }
 
     render() {
         return (
+<<<<<<< HEAD
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="card col-md-8">
@@ -133,6 +149,64 @@ class CreateSolicitacaoComponent extends Component {
                                 <button className="btn btn-success" onClick={this.saveOrUpdateSolicitacao}>Save</button>
                                 <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
                             </form>
+=======
+            <div>
+                <div className="container">
+                    <div className="row">
+                        <div className="card col-md-6 offset-md-3 offset-md-3">
+                            <h3 className="text-center">Add Solicitação</h3>
+                            <div className="card-body">
+                                <form>
+                                    <div className="form-group">
+                                        <label> User ID: </label>
+                                        <input
+                                            placeholder="User ID"
+                                            name="user_id"
+                                            className="form-control"
+                                            value={this.state.user_id}
+                                            onChange={this.changeUserIdHandler}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label> Analista ID: </label>
+                                        <input
+                                            placeholder="Analista ID"
+                                            name="anl_id"
+                                            className="form-control"
+                                            value={this.state.anl_id}
+                                            onChange={this.changeAnlIdHandler}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label> Data: </label>
+                                        <input
+                                            type="date"
+                                            placeholder="Data"
+                                            name="data"
+                                            className="form-control"
+                                            value={this.state.data}
+                                            onChange={this.changeDataHandler}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label> Status: </label>
+                                        <select
+                                            name="status"
+                                            className="form-control"
+                                            value={this.state.status}
+                                            onChange={this.changeStatusHandler}
+                                        >
+                                            <option value="PENDENTE">PENDENTE</option>
+                                            <option value="APROVADO">APROVADO</option>
+                                            <option value="REJEITADO">REJEITADO</option>
+                                        </select>
+                                    </div>
+
+                                    <button className="btn btn-success" onClick={this.saveOrUpdateSolicitacao}>Save</button>
+                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
+                                </form>
+                            </div>
+>>>>>>> f1c5f80 (SolicitacaoConsultoria)
                         </div>
                     </div>
                 </div>
